@@ -1,0 +1,16 @@
+package com.emp.serviceImpl;
+
+import java.util.List;
+
+import com.emp.model.Employee;
+import com.emp.service.EmployeeService;
+
+public class EmployeeServiceImpl implements EmployeeService{
+
+	@Override
+	public List<Employee> getAllEmployee() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

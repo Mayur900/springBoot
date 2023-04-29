@@ -1,0 +1,40 @@
+package baseapi;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class BaseController {
+
+	
+	@GetMapping(path = "/")
+	public String getData() {
+		return "Hello";
+	}
+	
+	@GetMapping(path = "/emp1")
+	public Employee getDataEmp() {
+		Employee e = new Employee();
+		e.setId(123);
+		e.setFirstName("Abahi");
+		e.setLastName("Hello");
+		e.setEmailId("mayur@mail.com");
+		
+		return e;
+	}
+	
+	@GetMapping(path = "/emplist")
+	public Employee getDataEmpList() {
+		List<Employee> list = new ArrayList<>();
+		Employee e = new Employee();
+		e.setId(123);
+		e.setFirstName("Abahi");
+		e.setLastName("Hello");
+		e.setEmailId("mayur@mail.com");
+		
+		return e;
+	}
+}

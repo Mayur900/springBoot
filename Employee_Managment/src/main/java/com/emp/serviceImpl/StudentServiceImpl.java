@@ -1,0 +1,28 @@
+package com.emp.serviceImpl;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.emp.model.Student;
+import com.emp.repository.StudentRepositry;
+import com.emp.service.StudentService;
+
+@Service
+public class StudentServiceImpl implements StudentService {
+
+	@Autowired
+	public StudentRepositry stRepositry;
+	
+	@Override
+	public List<Student> getAllStudent() {
+		return stRepositry.findAll();  
+	}
+
+	@Override
+	public Student saveStudent(Student s) {
+		return stRepositry.save(s);
+	}
+
+}
